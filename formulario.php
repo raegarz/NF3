@@ -1,6 +1,10 @@
 <?php
 session_start();
-    $_SESSION['cont']++;
+    if (!isset($_SESSION['cont'])) {
+        $_SESSION['cont'] = 1;
+      } else {
+        $_SESSION['cont']++;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
